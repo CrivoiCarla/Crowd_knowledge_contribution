@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Crowd_knowledge_contribution.props" />
+</Project>

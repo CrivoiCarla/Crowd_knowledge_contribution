@@ -1,0 +1,43 @@
+﻿@model Crowd_knowledge_contribution.Models.Category
+
+
+@{
+    ViewBag.Title = "Editare categorie";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>@Model.CategoryName</p>
+
+
+@using (Html.BeginForm(controllerName: "Categories", actionName: "Edit", method: FormMethod.Post,
+      routeValues: new { id = Model.Id }))
+{
+    @Html.Label("CategoryName", "Denumire categorie")
+    <br />
+    @Html.Editor("CategoryName")
+
+    @Html.ValidationMessageFor(m => m.CategoryName, null, new { @class = "text-danger" })
+    <br />
+
+    <br />
+
+    <div class="d-flex flex-row justify-content-between p-3 border-1 border-top">
+        <button class="btn btn-success" type="submit">Modifica categoria</button>
+   
+    <a class="btn alert-success" href="/Categories/Index/">Afisare lista categorii</a>
+       <form method="post" action="/Categories/Delete/@Model.Id">
+
+           
+        </form>
+
+        <form method="post" action="/Categories/Delete/@Model.Id">
+
+            <button class="btn btn-danger" type="submit">Sterge categoria</button>
+
+        </form>
+
+   </div>
+
+}
+

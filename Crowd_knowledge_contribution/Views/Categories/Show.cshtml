@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Afisare categorie";
+}
+
+
+<h2>@ViewBag.Title</h2>
+
+<br />
+
+
+
+@foreach (var article in ViewBag.Category)
+{
+    @if (article.Category.Id == ViewBag.Show.Id)
+    {
+        <div class="card">
+
+            <div class="card-body">
+
+                <h3 class="card-title alert-success py-3 px-3 rounded-2">@article.Title</h3>
+
+                <div class="card-text">>@Html.Raw(@article.Content)</div>
+
+                <div class="d-flex justify-content-between flex-row mt-5">
+
+                    <div><i class="bi bi-globe"></i> @article.Category.CategoryName</div>
+
+                    <a class="btn btn-success" href="/Articles/Show/@article.Id">Afisare articol</a>
+
+                    <span class="alert-success">@article.Date</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <br />
+        <br />
+    }
+
+}
+
+<br />
+<a class="btn alert-success" href="/Categories/Index/">Afisare lista categorii</a>
+
+<br />
+<hr />
+<br />
+
+<br />
+<hr />
+<br />
+

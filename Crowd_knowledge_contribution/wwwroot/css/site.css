@@ -1,0 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Moon+Dance&family=Sofia+Sans+Semi+Condensed&display=swap');
+.font-montserrat {
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+}
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font: 'Moon Dance', sans-serif;
+}
+
+.note-editor .dropdown-toggle::after {
+    display: none;
+}
+
+.font-logo {
+    font-family: 'Moon Dance', cursive;
+}
+
+.font-logo:hover {
+        color: #00b894 !important;
+    }
